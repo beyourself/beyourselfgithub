@@ -1,0 +1,1755 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<title>传奇2资料</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+</head>
+<style type="text/css">
+
+
+
+
+
+   
+
+    a {
+        text-decoration:none !important;
+        outline:none !important;
+    }
+    #header .white {color:#fff;}
+    body {
+        background:url(bg_mir.gif);
+        overflow: overflow-x: hidden;overflow-y: auto;
+    }
+    
+    .main-menu {
+        margin:10px auto;
+        padding:10px 0 0 0;
+        position: relative;
+        left: 50%;                       /*实现浮动元素水平居中*/
+        float:left;
+    }
+    /*顶部商标部分*/
+
+    .brand {
+        position: absolute;
+        top: 0;
+        left: -50%;                      
+        text-align:center;
+        box-sizing:border-box;
+        width:100%;
+        height:50px;
+        line-height: 50px;
+        border:1px solid rgb(25,25,25);
+        border-radius:4px 4px 0 0;
+        background:-webkit-linear-gradient(top,rgb(49,50,52),rgb(12,13,14));
+        background:-moz-linear-gradient(top,rgb(49,50,52),rgb(12,13,14));
+        background:-ms-linear-gradient(top,rgb(49,50,52),rgb(12,13,14));
+        background:linear-gradient(top,rgb(49,50,52),rgb(12,13,14));
+        box-shadow:inset 0 1px 0 rgb(62,63,65),inset 1px 0 0 rgba(75,75,80,0.4);
+    }
+    .brand .btn-group {position:absolute;top:0;left:8px;}
+    .brand .search-field {position:absolute;top:0;right:20px;}
+    /*brand区域登陆和注册按钮制作*/
+    .brand button {
+        height:27px;
+        padding:0 15px;
+        line-height:25px;
+        border:1px solid rgb(15,15,15);
+        background:-webkit-linear-gradient(top,rgb(67,68,68),rgb(41,42,43) 50%,rgb(15,16,17));
+        background:-moz-linear-gradient(top,rgb(67,68,68),rgb(41,42,43) 50%,rgb(15,16,17));
+        background:-ms-linear-gradient(top,rgb(67,68,68),rgb(41,42,43) 50%,rgb(15,16,17));
+        background:linear-gradient(top,rgb(67,68,68),rgb(41,42,43) 50%,rgb(15,16,17));
+        color:rgb(200,200,200);
+        box-shadow:inset 0 1px 0 rgb(77,77,78),0 1px 0 rgb(42,43,44);
+        font-weight:500;
+        text-shadow:1px 1px 0 rgb(15,15,16);
+        -webkit-transition: color 300ms ease;
+        -moz-transition: color 300ms ease;
+        transition: color 300ms ease;
+    }
+    .brand .sign-in {border-radius:14px 0 0 14px; border-right:0 none;}
+    .brand .register {border-radius:0 14px 14px 0;margin-left: -3px;}
+    /*brand区域logo*/
+    .brand .logo {
+        color:rgb(255,255,255);
+        font-size:25px;
+        font-weight:bolder;
+        text-shadow:0 -1px 0 rgb(111,111,111), 0 -2px 0 rgb(32,33,34);
+    }
+    /*brand区域搜索栏制作*/
+    .brand input {
+        width:140px;
+        height:26px;
+        border:none;
+        padding:0 0 0 30px;
+        border-radius:13px;
+        color:rgb(255,255,255);
+        background-color:rgb(0,0,0);
+        box-shadow:0 1px 0 rgb(43,44,45);
+    }
+    .brand .search-icon {
+        position:absolute;
+        display:block;
+        left:10px;
+        top:0;
+        font-family:icon-search;
+        font-size:13px;
+        color:rgb(100,100,100);
+        cursor:pointer;
+        -webkit-transition: color 300ms ease;
+        -moz-transition: color 300ms ease;
+        transition: color 300ms ease;
+    }
+    /*按钮的悬浮和激活效果*/
+    .brand button:hover {color:rgb(255,255,255);}
+    .brand button:active {background:-*-linear-gradient(top,rgb(15,16,17),rgb(41,42,43) 50%,rgb(67,68,68));}
+    .brand .search-icon:hover {color:rgb(255,255,255);}
+    
+    /*导航条部分*/
+
+    .nav {
+        background-color:rgb(175,175,175);
+        border-radius:0 0 4px 4px;
+        position: relative;
+        left: -50%;
+    }
+    .nav > li {float:left;}
+    /*导航条按钮制作*/
+    .nav > li > a {
+        display:block;
+        color:rgb(50,50,50);
+        height:38px;
+        font-size:13px;
+        font-weight:bold;
+        line-height:38px;
+        padding:0 20px;
+        border:1px solid;
+        margin-right:1px;
+        border-color:rgb(254,254,254) rgb(227,227,227) rgb(210,210,210);
+        background:-webkit-linear-gradient(top,rgb(248,248,248),rgb(184,184,184));
+        background:-moz-linear-gradient(top,rgb(248,248,248),rgb(184,184,184));
+        background:-ms-linear-gradient(top,rgb(248,248,248),rgb(184,184,184));
+        background:linear-gradient(top,rgb(248,248,248),rgb(184,184,184));
+        text-shadow: 0 1px 0 rgb(229,229,229);
+    }
+    .nav > li:first-child a {border-radius:0 0 0 4px;}
+    .nav > li:last-child {position:relative;}
+    .nav > li:last-child > a {
+        border-radius:0 0 4px 0;
+        padding:0 32px 0 22px;
+        margin:0;
+    }
+    /*下拉按钮的三角标制作*/
+    .nav > li:last-child > a:before {
+        content:"";
+        position:absolute;
+        right:15px;
+        top:18px;
+        border:5px solid transparent;
+        border-color:rgb(50,50,50) transparent transparent transparent;
+    }
+    /*导航条按钮悬浮和激活效果*/
+    .nav > li:hover > a {
+        border-color:rgb(255,255,255) rgb(240,240,240) rgb(221,221,221);
+        background:-*-linear-gradient(top,rgb(255,255,255),rgb(203,203,203));
+    }
+    .nav > li:not(:last-child) > a:active {background:-*-linear-gradient(top,rgb(203,203,203),rgb(255,255,255));}
+    .nav > li:hover ul {display:block;}
+    
+    /*下拉菜单制作*/
+    .daohang {
+        position:absolute;
+        width:478px;
+        top:100%;
+        right:0;
+        margin-top:13px;
+        padding:46px 0 61px 0;
+        border:1px solid;
+        border-color:rgb(250,250,250) rgb(226,226,226) rgb(234,234,234);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-moz-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-ms-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        color:rgb(0,0,0);
+        display:none;
+    }
+	    .daohang1 {
+        position:absolute;
+        width:170px;
+        top:100%;
+        left:0;
+        margin-top:13px;
+        padding:46px 0 61px 0;
+        border:1px solid;
+        border-color:rgb(250,250,250) rgb(226,226,226) rgb(234,234,234);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-moz-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-ms-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        color:rgb(0,0,0);
+        display:none;
+    }		
+			    .daohang2 {
+        position:absolute;
+        width:478px;
+        top:100%;
+        left:60;
+        margin-top:13px;
+        padding:46px 0 61px 0;
+        border:1px solid;
+        border-color:rgb(250,250,250) rgb(226,226,226) rgb(234,234,234);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-moz-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-ms-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        color:rgb(0,0,0);
+        display:none;
+		    }
+			    .daohang3 {
+        position:absolute;
+        width:400px;
+        top:100%;
+        left:120;
+        margin-top:13px;
+        padding:46px 0 61px 0;
+        border:1px solid;
+        border-color:rgb(250,250,250) rgb(226,226,226) rgb(234,234,234);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-moz-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-ms-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        color:rgb(0,0,0);
+        display:none;
+    }
+	.daohang4 {
+        position:absolute;
+        width:309px;
+        top:100%;
+        left:180;
+        margin-top:13px;
+        padding:46px 0 61px 0;
+        border:1px solid;
+        border-color:rgb(250,250,250) rgb(226,226,226) rgb(234,234,234);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-moz-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-ms-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        color:rgb(0,0,0);
+        display:none;
+    }
+	.daohang5 {
+        position:absolute;
+        width:400px;
+        top:100%;
+        left:240;
+        margin-top:13px;
+        padding:46px 0 61px 0;
+        border:1px solid;
+        border-color:rgb(250,250,250) rgb(226,226,226) rgb(234,234,234);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-moz-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-ms-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        color:rgb(0,0,0);
+        display:none;
+    }
+	.daohang6 {
+        position:absolute;
+        width:400px;
+        top:100%;
+        left:300;
+        margin-top:13px;
+        padding:46px 0 61px 0;
+        border:1px solid;
+        border-color:rgb(250,250,250) rgb(226,226,226) rgb(234,234,234);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-moz-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-ms-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        color:rgb(0,0,0);
+        display:none;
+    }
+	.daohang7 {
+        position:absolute;
+        width:170px;
+        top:100%;
+        left:360;
+        margin-top:13px;
+        padding:46px 0 61px 0;
+        border:1px solid;
+        border-color:rgb(250,250,250) rgb(226,226,226) rgb(234,234,234);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-moz-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-ms-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        color:rgb(0,0,0);
+        display:none;
+    }
+	.daohang8 {
+        position:absolute;
+        width:400px;
+        top:100%;
+        left:420;
+        margin-top:13px;
+        padding:46px 0 61px 0;
+        border:1px solid;
+        border-color:rgb(250,250,250) rgb(226,226,226) rgb(234,234,234);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-moz-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-ms-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        color:rgb(0,0,0);
+        display:none;
+    }
+	.daohang9 {
+        position:absolute;
+        width:400px;
+        top:100%;
+        left:480;
+        margin-top:13px;
+        padding:46px 0 61px 0;
+        border:1px solid;
+        border-color:rgb(250,250,250) rgb(226,226,226) rgb(234,234,234);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-moz-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-ms-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        color:rgb(0,0,0);
+        display:none;
+    }
+	.daohang10 {
+        position:absolute;
+        width:400px;
+        top:100%;
+        left:540;
+        margin-top:13px;
+        padding:46px 0 61px 0;
+        border:1px solid;
+        border-color:rgb(250,250,250) rgb(226,226,226) rgb(234,234,234);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-moz-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:-ms-linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        background:linear-gradient(top,rgb(227,227,227),rgb(193,193,193));
+        color:rgb(0,0,0);
+        display:none;
+    }
+	
+    /*填补dropdown和nav之间的留白，避免鼠标进入该留白区域时失去悬浮状态导致dropdown的消失*/
+    .daohang:before {         
+        content:"";
+        position:absolute;
+        width:100%;
+        height:14px;
+        bottom:100%;
+        left:0;
+    }
+	    .daohang1:before {         
+        content:"";
+        position:absolute;
+        width:100%;
+        height:14px;
+        bottom:100%;
+        left:0;
+    }
+		    .daohang2:before {         
+        content:"";
+        position:absolute;
+        width:100%;
+        height:14px;
+        bottom:100%;
+        left:0;
+    }
+		    .daohang3:before {         
+        content:"";
+        position:absolute;
+        width:100%;
+        height:14px;
+        bottom:100%;
+        left:0;
+    }
+			    .daohang4:before {         
+        content:"";
+        position:absolute;
+        width:100%;
+        height:14px;
+        bottom:100%;
+        left:0;
+    }
+			    .daohang5:before {         
+        content:"";
+        position:absolute;
+        width:100%;
+        height:14px;
+        bottom:100%;
+        left:0;
+    }
+			    .daohang6:before {         
+        content:"";
+        position:absolute;
+        width:100%;
+        height:14px;
+        bottom:100%;
+        left:0;
+    }
+			    .daohang7:before {         
+        content:"";
+        position:absolute;
+        width:100%;
+        height:14px;
+        bottom:100%;
+        left:0;
+    }
+			    .daohang8:before {         
+        content:"";
+        position:absolute;
+        width:100%;
+        height:14px;
+        bottom:100%;
+        left:0;
+    }
+			    .daohang9:before {         
+        content:"";
+        position:absolute;
+        width:100%;
+        height:14px;
+        bottom:100%;
+        left:0;
+    }
+			    .daohang10:before {         
+        content:"";
+        position:absolute;
+        width:100%;
+        height:14px;
+        bottom:100%;
+        left:0;
+    }
+    /*制作dropdown三角标*/
+    .daohang:after {
+        content:"";
+        position:absolute;
+        bottom:100%;
+        right:20px;
+        width:0;
+        height:0;
+        border:5px solid transparent;
+        border-color:transparent transparent rgb(227,227,227) transparent;
+    }
+	    .daohang1:after {
+        content:"";
+        position:absolute;
+        bottom:100%;
+        left:20px;
+        width:0;
+        height:0;
+        border:5px solid transparent;
+        border-color:transparent transparent rgb(227,227,227) transparent;
+    }
+		    .daohang2:after {
+        content:"";
+        position:absolute;
+        bottom:100%;
+        left:20px;
+        width:0;
+        height:0;
+        border:5px solid transparent;
+        border-color:transparent transparent rgb(227,227,227) transparent;
+		   }
+		   		    .daohang3:after {
+        content:"";
+        position:absolute;
+        bottom:100%;
+        left:20px;
+        width:0;
+        height:0;
+        border:5px solid transparent;
+        border-color:transparent transparent rgb(227,227,227) transparent;
+		   }
+		       .daohang4:after {
+        content:"";
+        position:absolute;
+        bottom:100%;
+        left:20px;
+        width:0;
+        height:0;
+        border:5px solid transparent;
+        border-color:transparent transparent rgb(227,227,227) transparent;
+    }
+	    .daohang5:after {
+        content:"";
+        position:absolute;
+        bottom:100%;
+        left:20px;
+        width:0;
+        height:0;
+        border:5px solid transparent;
+        border-color:transparent transparent rgb(227,227,227) transparent;
+    }
+	    .daohang6:after {
+        content:"";
+        position:absolute;
+        bottom:100%;
+        left:20px;
+        width:0;
+        height:0;
+        border:5px solid transparent;
+        border-color:transparent transparent rgb(227,227,227) transparent;
+    }
+	    .daohang7:after {
+        content:"";
+        position:absolute;
+        bottom:100%;
+        left:20px;
+        width:0;
+        height:0;
+        border:5px solid transparent;
+        border-color:transparent transparent rgb(227,227,227) transparent;
+    }
+	    .daohang8:after {
+        content:"";
+        position:absolute;
+        bottom:100%;
+        left:20px;
+        width:0;
+        height:0;
+        border:5px solid transparent;
+        border-color:transparent transparent rgb(227,227,227) transparent;
+    }
+	    .daohang9:after {
+        content:"";
+        position:absolute;
+        bottom:100%;
+        left:20px;
+        width:0;
+        height:0;
+        border:5px solid transparent;
+        border-color:transparent transparent rgb(227,227,227) transparent;
+    }
+	    .daohang10:after {
+        content:"";
+        position:absolute;
+        bottom:100%;
+        left:20px;
+        width:0;
+        height:0;
+        border:5px solid transparent;
+        border-color:transparent transparent rgb(227,227,227) transparent;
+    }
+		   
+    /*利用display:inline-block实现多栏布局*/
+    .daohang li {
+        display:inline-block;
+        width:153px;
+        vertical-align: top;
+    }
+	    .daohang1 li {
+        display:inline-block;
+        width:153px;
+        vertical-align: top;
+    }
+		    .daohang2 li {
+        display:inline-block;
+        width:153px;
+        vertical-align: top;
+    }
+		    .daohang3 li {
+        display:inline-block;
+        width:153px;
+        vertical-align: top;
+    }
+	    .daohang4 li {
+        display:inline-block;
+        width:153px;
+        vertical-align: top;
+    }
+	    .daohang5 li {
+        display:inline-block;
+        width:153px;
+        vertical-align: top;
+    }
+	    .daohang6 li {
+        display:inline-block;
+        width:153px;
+        vertical-align: top;
+    }
+	    .daohang7 li {
+        display:inline-block;
+        width:153px;
+        vertical-align: top;
+    }
+	    .daohang8 li {
+        display:inline-block;
+        width:153px;
+        vertical-align: top;
+    }
+	    .daohang9 li {
+        display:inline-block;
+        width:153px;
+        vertical-align: top;
+    }
+	    .daohang10 li {
+        display:inline-block;
+        width:153px;
+        vertical-align: top;
+    }
+    /*每一列中的元素标签样式*/
+    .daohang li a {
+        display:block;
+        margin-left:13px;
+        color:rgb(0,0,0);
+        font-size:13px;
+        font-weight:bold;
+        padding:2px 5px;
+        text-shadow: 0 1px 0 rgb(240,240,240);
+        border-radius:7px;
+    }
+	    .daohang1 li a {
+        display:block;
+        margin-left:13px;
+        color:rgb(0,0,0);
+        font-size:13px;
+        font-weight:bold;
+        padding:2px 5px;
+        text-shadow: 0 1px 0 rgb(240,240,240);
+        border-radius:7px;
+    }
+		    .daohang2 li a {
+        display:block;
+        margin-left:13px;
+        color:rgb(0,0,0);
+        font-size:13px;
+        font-weight:bold;
+        padding:2px 5px;
+        text-shadow: 0 1px 0 rgb(240,240,240);
+        border-radius:7px;
+    }
+		    .daohang3 li a {
+        display:block;
+        margin-left:13px;
+        color:rgb(0,0,0);
+        font-size:13px;
+        font-weight:bold;
+        padding:2px 5px;
+        text-shadow: 0 1px 0 rgb(240,240,240);
+        border-radius:7px;
+    }
+	    .daohang4 li a {
+        display:block;
+        margin-left:13px;
+        color:rgb(0,0,0);
+        font-size:13px;
+        font-weight:bold;
+        padding:2px 5px;
+        text-shadow: 0 1px 0 rgb(240,240,240);
+        border-radius:7px;
+    }
+	    .daohang5 li a {
+        display:block;
+        margin-left:13px;
+        color:rgb(0,0,0);
+        font-size:13px;
+        font-weight:bold;
+        padding:2px 5px;
+        text-shadow: 0 1px 0 rgb(240,240,240);
+        border-radius:7px;
+    }
+	    .daohang6 li a {
+        display:block;
+        margin-left:13px;
+        color:rgb(0,0,0);
+        font-size:13px;
+        font-weight:bold;
+        padding:2px 5px;
+        text-shadow: 0 1px 0 rgb(240,240,240);
+        border-radius:7px;
+    }
+	    .daohang7 li a {
+        display:block;
+        margin-left:13px;
+        color:rgb(0,0,0);
+        font-size:13px;
+        font-weight:bold;
+        padding:2px 5px;
+        text-shadow: 0 1px 0 rgb(240,240,240);
+        border-radius:7px;
+    }
+	    .daohang8 li a {
+        display:block;
+        margin-left:13px;
+        color:rgb(0,0,0);
+        font-size:13px;
+        font-weight:bold;
+        padding:2px 5px;
+        text-shadow: 0 1px 0 rgb(240,240,240);
+        border-radius:7px;
+    }
+	    .daohang9 li a {
+        display:block;
+        margin-left:13px;
+        color:rgb(0,0,0);
+        font-size:13px;
+        font-weight:bold;
+        padding:2px 5px;
+        text-shadow: 0 1px 0 rgb(240,240,240);
+        border-radius:7px;
+    }
+	    .daohang10 li a {
+        display:block;
+        margin-left:13px;
+        color:rgb(0,0,0);
+        font-size:13px;
+        font-weight:bold;
+        padding:2px 5px;
+        text-shadow: 0 1px 0 rgb(240,240,240);
+        border-radius:7px;
+    }
+    /*页首*/
+    .daohang .header {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        margin-left:18px;
+        line-height:48px;
+        color:rgb(33,33,33);
+        text-shadow: 0 1px 0 rgb(246,246,246);
+    }
+	    .daohang1 .header {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        margin-left:18px;
+        line-height:48px;
+        color:rgb(33,33,33);
+        text-shadow: 0 1px 0 rgb(246,246,246);
+    }
+	 .daohang2 .header {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        margin-left:18px;
+        line-height:48px;
+        color:rgb(33,33,33);
+        text-shadow: 0 1px 0 rgb(246,246,246);
+    }
+	 .daohang3 .header {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        margin-left:18px;
+        line-height:48px;
+        color:rgb(33,33,33);
+        text-shadow: 0 1px 0 rgb(246,246,246);
+    }
+	    .daohang3 .header {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        margin-left:18px;
+        line-height:48px;
+        color:rgb(33,33,33);
+        text-shadow: 0 1px 0 rgb(246,246,246);
+    }
+	    .daohang4 .header {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        margin-left:18px;
+        line-height:48px;
+        color:rgb(33,33,33);
+        text-shadow: 0 1px 0 rgb(246,246,246);
+    }
+	    .daohang5 .header {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        margin-left:18px;
+        line-height:48px;
+        color:rgb(33,33,33);
+        text-shadow: 0 1px 0 rgb(246,246,246);
+    }
+	    .daohang6 .header {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        margin-left:18px;
+        line-height:48px;
+        color:rgb(33,33,33);
+        text-shadow: 0 1px 0 rgb(246,246,246);
+    }
+	    .daohang7 .header {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        margin-left:18px;
+        line-height:48px;
+        color:rgb(33,33,33);
+        text-shadow: 0 1px 0 rgb(246,246,246);
+    }
+	    .daohang8 .header {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        margin-left:18px;
+        line-height:48px;
+        color:rgb(33,33,33);
+        text-shadow: 0 1px 0 rgb(246,246,246);
+    }
+	    .daohang9 .header {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        margin-left:18px;
+        line-height:48px;
+        color:rgb(33,33,33);
+        text-shadow: 0 1px 0 rgb(246,246,246);
+    }
+	    .daohang10 .header {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        margin-left:18px;
+        line-height:48px;
+        color:rgb(33,33,33);
+        text-shadow: 0 1px 0 rgb(246,246,246);
+    }
+    /*页脚*/
+    .daohang .footer {
+        display:block;
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        color:rgb(145,145,145);
+        text-shadow:0 1px 0 rgb(242,242,242);
+        line-height:49px;
+        background-color:rgb(228,228,228);
+        border-radius:0 0 3px 3px;
+        text-indent:20px;
+    }
+	    .daohang1 .footer {
+        display:block;
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        color:rgb(145,145,145);
+        text-shadow:0 1px 0 rgb(242,242,242);
+        line-height:49px;
+        background-color:rgb(228,228,228);
+        border-radius:0 0 3px 3px;
+        text-indent:20px;
+    }
+		    .daohang2 .footer {
+        display:block;
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        color:rgb(145,145,145);
+        text-shadow:0 1px 0 rgb(242,242,242);
+        line-height:49px;
+        background-color:rgb(228,228,228);
+        border-radius:0 0 3px 3px;
+        text-indent:20px;
+    }
+		    .daohang3 .footer {
+        display:block;
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        color:rgb(145,145,145);
+        text-shadow:0 1px 0 rgb(242,242,242);
+        line-height:49px;
+        background-color:rgb(228,228,228);
+        border-radius:0 0 3px 3px;
+        text-indent:20px;
+    }
+			    .daohang4 .footer {
+        display:block;
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        color:rgb(145,145,145);
+        text-shadow:0 1px 0 rgb(242,242,242);
+        line-height:49px;
+        background-color:rgb(228,228,228);
+        border-radius:0 0 3px 3px;
+        text-indent:20px;
+    }
+			    .daohang5 .footer {
+        display:block;
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        color:rgb(145,145,145);
+        text-shadow:0 1px 0 rgb(242,242,242);
+        line-height:49px;
+        background-color:rgb(228,228,228);
+        border-radius:0 0 3px 3px;
+        text-indent:20px;
+    }
+			    .daohang6 .footer {
+        display:block;
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        color:rgb(145,145,145);
+        text-shadow:0 1px 0 rgb(242,242,242);
+        line-height:49px;
+        background-color:rgb(228,228,228);
+        border-radius:0 0 3px 3px;
+        text-indent:20px;
+    }
+			    .daohang7 .footer {
+        display:block;
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        color:rgb(145,145,145);
+        text-shadow:0 1px 0 rgb(242,242,242);
+        line-height:49px;
+        background-color:rgb(228,228,228);
+        border-radius:0 0 3px 3px;
+        text-indent:20px;
+    }
+			    .daohang8 .footer {
+        display:block;
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        color:rgb(145,145,145);
+        text-shadow:0 1px 0 rgb(242,242,242);
+        line-height:49px;
+        background-color:rgb(228,228,228);
+        border-radius:0 0 3px 3px;
+        text-indent:20px;
+    }
+			    .daohang9 .footer {
+        display:block;
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        color:rgb(145,145,145);
+        text-shadow:0 1px 0 rgb(242,242,242);
+        line-height:49px;
+        background-color:rgb(228,228,228);
+        border-radius:0 0 3px 3px;
+        text-indent:20px;
+    }
+			    .daohang10 .footer {
+        display:block;
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        color:rgb(145,145,145);
+        text-shadow:0 1px 0 rgb(242,242,242);
+        line-height:49px;
+        background-color:rgb(228,228,228);
+        border-radius:0 0 3px 3px;
+        text-indent:20px;
+    }
+    /*页脚按钮*/
+    .daohang .footer a {
+        position:absolute;
+        right:10px;
+        top:50%;
+        margin-top:-15px;
+        color:rgb(50,50,50);
+        text-shadow:0 1px 0 rgb(247,247,247);
+        height:28px;
+        line-height:28px;
+        padding:0 12px;
+        text-indent:0;
+        border:1px solid rgb(200,200,200);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-moz-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-ms-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        box-shadow:inset 0 1px 0 rgb(255,255,255),0 1px 3px rgb(210,210,210);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+	    .daohang1 .footer a {
+        position:absolute;
+        right:10px;
+        top:50%;
+        margin-top:-15px;
+        color:rgb(50,50,50);
+        text-shadow:0 1px 0 rgb(247,247,247);
+        height:28px;
+        line-height:28px;
+        padding:0 12px;
+        text-indent:0;
+        border:1px solid rgb(200,200,200);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-moz-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-ms-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        box-shadow:inset 0 1px 0 rgb(255,255,255),0 1px 3px rgb(210,210,210);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+	    .daohang2 .footer a {
+        position:absolute;
+        right:10px;
+        top:50%;
+        margin-top:-15px;
+        color:rgb(50,50,50);
+        text-shadow:0 1px 0 rgb(247,247,247);
+        height:28px;
+        line-height:28px;
+        padding:0 12px;
+        text-indent:0;
+        border:1px solid rgb(200,200,200);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-moz-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-ms-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        box-shadow:inset 0 1px 0 rgb(255,255,255),0 1px 3px rgb(210,210,210);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+	    .daohang3 .footer a {
+        position:absolute;
+        right:10px;
+        top:50%;
+        margin-top:-15px;
+        color:rgb(50,50,50);
+        text-shadow:0 1px 0 rgb(247,247,247);
+        height:28px;
+        line-height:28px;
+        padding:0 12px;
+        text-indent:0;
+        border:1px solid rgb(200,200,200);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-moz-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-ms-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        box-shadow:inset 0 1px 0 rgb(255,255,255),0 1px 3px rgb(210,210,210);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+	    .daohang4 .footer a {
+        position:absolute;
+        right:10px;
+        top:50%;
+        margin-top:-15px;
+        color:rgb(50,50,50);
+        text-shadow:0 1px 0 rgb(247,247,247);
+        height:28px;
+        line-height:28px;
+        padding:0 12px;
+        text-indent:0;
+        border:1px solid rgb(200,200,200);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-moz-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-ms-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        box-shadow:inset 0 1px 0 rgb(255,255,255),0 1px 3px rgb(210,210,210);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+	    .daohang5 .footer a {
+        position:absolute;
+        right:10px;
+        top:50%;
+        margin-top:-15px;
+        color:rgb(50,50,50);
+        text-shadow:0 1px 0 rgb(247,247,247);
+        height:28px;
+        line-height:28px;
+        padding:0 12px;
+        text-indent:0;
+        border:1px solid rgb(200,200,200);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-moz-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-ms-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        box-shadow:inset 0 1px 0 rgb(255,255,255),0 1px 3px rgb(210,210,210);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+	    .daohang6 .footer a {
+        position:absolute;
+        right:10px;
+        top:50%;
+        margin-top:-15px;
+        color:rgb(50,50,50);
+        text-shadow:0 1px 0 rgb(247,247,247);
+        height:28px;
+        line-height:28px;
+        padding:0 12px;
+        text-indent:0;
+        border:1px solid rgb(200,200,200);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-moz-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-ms-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        box-shadow:inset 0 1px 0 rgb(255,255,255),0 1px 3px rgb(210,210,210);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+	    .daohang7 .footer a {
+        position:absolute;
+        right:10px;
+        top:50%;
+        margin-top:-15px;
+        color:rgb(50,50,50);
+        text-shadow:0 1px 0 rgb(247,247,247);
+        height:28px;
+        line-height:28px;
+        padding:0 12px;
+        text-indent:0;
+        border:1px solid rgb(200,200,200);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-moz-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-ms-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        box-shadow:inset 0 1px 0 rgb(255,255,255),0 1px 3px rgb(210,210,210);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+	    .daohang8 .footer a {
+        position:absolute;
+        right:10px;
+        top:50%;
+        margin-top:-15px;
+        color:rgb(50,50,50);
+        text-shadow:0 1px 0 rgb(247,247,247);
+        height:28px;
+        line-height:28px;
+        padding:0 12px;
+        text-indent:0;
+        border:1px solid rgb(200,200,200);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-moz-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-ms-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        box-shadow:inset 0 1px 0 rgb(255,255,255),0 1px 3px rgb(210,210,210);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+	    .daohang9 .footer a {
+        position:absolute;
+        right:10px;
+        top:50%;
+        margin-top:-15px;
+        color:rgb(50,50,50);
+        text-shadow:0 1px 0 rgb(247,247,247);
+        height:28px;
+        line-height:28px;
+        padding:0 12px;
+        text-indent:0;
+        border:1px solid rgb(200,200,200);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-moz-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-ms-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        box-shadow:inset 0 1px 0 rgb(255,255,255),0 1px 3px rgb(210,210,210);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+	    .daohang10 .footer a {
+        position:absolute;
+        right:10px;
+        top:50%;
+        margin-top:-15px;
+        color:rgb(50,50,50);
+        text-shadow:0 1px 0 rgb(247,247,247);
+        height:28px;
+        line-height:28px;
+        padding:0 12px;
+        text-indent:0;
+        border:1px solid rgb(200,200,200);
+        border-radius:4px;
+        background:-webkit-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-moz-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:-ms-linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        background:linear-gradient(top,rgb(252,252,252),rgb(234,234,234));
+        box-shadow:inset 0 1px 0 rgb(255,255,255),0 1px 3px rgb(210,210,210);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+    /*元素悬浮效果*/
+    .daohang li a:hover {
+        color:rgb(0,31,99);
+        background:rgb(150,150,150);
+    }
+	    .daohang1 li a:hover {
+        color:rgb(0,31,99);
+        background:rgb(150,150,150);
+    }
+		    .daohang2 li a:hover {
+        color:rgb(0,31,99);
+        background:rgb(150,150,150);
+    }
+		    .daohang3 li a:hover {
+        color:rgb(0,31,99);
+        background:rgb(150,150,150);
+    }
+	    .daohang4 li a:hover {
+        color:rgb(0,31,99);
+        background:rgb(150,150,150);
+    }
+	    .daohang5 li a:hover {
+        color:rgb(0,31,99);
+        background:rgb(150,150,150);
+    }
+	    .daohang6 li a:hover {
+        color:rgb(0,31,99);
+        background:rgb(150,150,150);
+    }
+	    .daohang7 li a:hover {
+        color:rgb(0,31,99);
+        background:rgb(150,150,150);
+    }
+	    .daohang8 li a:hover {
+        color:rgb(0,31,99);
+        background:rgb(150,150,150);
+    }
+	    .daohang9 li a:hover {
+        color:rgb(0,31,99);
+        background:rgb(150,150,150);
+    }
+	    .daohang10 li a:hover {
+        color:rgb(0,31,99);
+        background:rgb(150,150,150);
+    }
+    /*按钮悬浮和激活效果*/
+    .daohang .footer a:hover {color:rgb(0,31,99);}
+    .daohang .footer a:active {background:-*-linear-gradient(top,rgb(234,234,234),rgb(252,252,252));}
+	
+	.daohang1 .footer a:hover {color:rgb(0,31,99);}
+    .daohang1 .footer a:active {background:-*-linear-gradient(top,rgb(234,234,234),rgb(252,252,252));}
+	
+	.daohang2 .footer a:hover {color:rgb(0,31,99);}
+    .daohang2 .footer a:active {background:-*-linear-gradient(top,rgb(234,234,234),rgb(252,252,252));}
+	
+	.daohang3 .footer a:hover {color:rgb(0,31,99);}
+    .daohang3 .footer a:active {background:-*-linear-gradient(top,rgb(234,234,234),rgb(252,252,252));}
+	
+		.daohang4 .footer a:hover {color:rgb(0,31,99);}
+    .daohang4 .footer a:active {background:-*-linear-gradient(top,rgb(234,234,234),rgb(252,252,252));}
+	
+		.daohang3 .footer a:hover {color:rgb(0,31,99);}
+    .daohang3 .footer a:active {background:-*-linear-gradient(top,rgb(234,234,234),rgb(252,252,252));}
+	
+		.daohang5 .footer a:hover {color:rgb(0,31,99);}
+    .daohang5 .footer a:active {background:-*-linear-gradient(top,rgb(234,234,234),rgb(252,252,252));}
+	
+		.daohang6 .footer a:hover {color:rgb(0,31,99);}
+    .daohang6 .footer a:active {background:-*-linear-gradient(top,rgb(234,234,234),rgb(252,252,252));}
+	
+		.daohang7 .footer a:hover {color:rgb(0,31,99);}
+    .daohang7 .footer a:active {background:-*-linear-gradient(top,rgb(234,234,234),rgb(252,252,252));}
+	
+		.daohang8 .footer a:hover {color:rgb(0,31,99);}
+    .daohang8 .footer a:active {background:-*-linear-gradient(top,rgb(234,234,234),rgb(252,252,252));}
+	
+		.daohang9 .footer a:hover {color:rgb(0,31,99);}
+    .daohang9 .footer a:active {background:-*-linear-gradient(top,rgb(234,234,234),rgb(252,252,252));}
+	
+		.daohang10 .footer a:hover {color:rgb(0,31,99);}
+    .daohang10 .footer a:active {background:-*-linear-gradient(top,rgb(234,234,234),rgb(252,252,252));}
+    /*图标*/
+    @font-face {
+      font-family: 'icon-search';
+      src: url("font/icon-search.eot");
+      src: url("font/icon-search.eot?#iefix") format('embedded-opentype'),
+           url("font/icon-search.woff") format('woff'),
+           url("font/icon-search.ttf") format('truetype'),
+           url("font/icon-search.svg#icon-search") format('svg');
+      font-weight: normal;
+      font-style: normal;
+	  
+	  
+	  
+	  
+
+</style>
+<body>
+    <img src="tophead.png">
+<div class="page">
+	<header id="header">
+		<hgroup class="white blank">
+
+          </hgroup>
+	</header>
+	<section class="demo clearfix">
+<div class="main-menu">
+	
+	<ul class="nav clearfix">
+		<li>
+		<a href="index.html">介绍</a>
+			<ul class="daohang1">
+				<span class="header">归来传奇2介绍</span>
+				<li>
+			
+					<a href="界面.html">界面</a>
+					<a href="#">默认快捷键</a>
+					<a href="#">口令</a>
+					<a href="#">挖矿</a>
+
+				</li>
+				<span class="footer"> 更多介绍点击 
+					 <a href="#">更多</a> </span>
+			</ul>
+		</li>
+		<li>
+		<a href="地图.html">地图</a>
+					
+			<ul class="daohang2">
+				<span class="header">归来传奇2地图</span>
+				<li>
+					<a href="#">世界地图</a>
+					<a href="#">比奇省</a>
+					<a href="#">沃玛森林</a>
+					<a href="#">毒蛇山谷</a>
+					<a href="#">盟重省</a>
+
+
+
+				</li>
+				<li>
+
+					
+					<a href="#">龙蛇川</a>
+					<a href="#">地牢</a>
+					<a href="#">未知暗殿</a>
+					<a href="#">石墓</a>
+					<a href="#">香石石墓</a>
+
+				</li>
+				<li>
+
+
+
+
+				
+					<a href="#">神穿鬼路</a>
+					<a href="#">般若石窟</a>
+					<a href="#">般若神殿</a>
+					<a href="#">古代般若石窟</a>
+					<a href="#">片木岛</a>
+
+				</li>
+				<span class="footer"> 更多介绍点击 
+					 <a href="#">更多</a> </span>
+			</ul>
+		</li>
+		
+		
+		
+		<li><a href="#">怪物</a>
+			
+			<ul class="daohang2">
+				<span class="header">归来传奇2怪物</span>
+				<li>
+					<a href="#">boss</a>
+					<a href="#">比奇省</a>
+					<a href="#">沃玛森林</a>
+					<a href="#">毒蛇山谷</a>
+					<a href="#">盟重省</a>
+
+					
+
+				</li>
+				<li>
+
+					
+					<a href="#">龙蛇川</a>
+					<a href="#">地牢</a>
+					<a href="#">未知暗殿</a>
+					<a href="#">石墓</a>
+					<a href="#">香石石墓</a>
+
+				</li>
+				<li>
+
+
+
+
+				
+					<a href="#">神穿鬼路</a>
+					<a href="#">般若石窟</a>
+					<a href="#">般若神殿</a>
+					<a href="#">古代般若石窟</a>
+					<a href="#">片木岛</a>
+
+				</li>
+				<span class="footer"> 更多介绍点击 
+					 <a href="#">更多</a> </span>
+			</ul>
+		</li>
+		<li>
+		<a href="#">技能</a>
+					<ul class="daohang4">
+				<span class="header">归来传奇2技能</span>
+				<li>
+					<a href="#">战士</a>
+					<a href="#">法师</a>
+					<a href="#">道士</a>
+
+			
+				</li>
+				<li>
+					<a href="#">烹饪</a>
+					<a href="#">锻造</a>
+					<a href="#">炼金</a>
+
+				</li>
+				<li>
+
+				
+				
+				</li>
+				<span class="footer"> 更多介绍点击 
+					 <a href="#">更多</a> </span>
+			</ul>
+		</li>
+		<li>
+		<a href="#">道具</a>
+							<ul class="daohang2">
+				<span class="header">归来传奇2道具</span>
+				<li>
+					<a href="#">武器</a>
+					<a href="#">盔甲</a>
+					<a href="#">头盔</a>
+					<a href="#">项链</a>
+					<a href="#">手镯</a>
+
+
+
+
+
+
+				</li>
+
+				<li>
+
+					<a href="#">靴子</a>
+					<a href="#">矿物</a>
+					<a href="#">宝玉</a>
+					<a href="#">神珠</a>
+					<a href="#">坐骑</a>
+
+
+				</li>
+				
+				<li>
+	
+					<a href="#">觉醒材料</a>
+					<a href="#">施法材料</a>
+					<a href="#">特殊消耗品</a>
+					<a href="#">恢复性消耗品</a>
+					<a href="#">增强性消耗品</a>
+					<a href="#"></a>
+
+				</li>
+				
+
+				<span class="footer"> 更多介绍点击 
+					 <a href="#">更多</a> </span>
+			</ul>
+		</li>
+		<li><a href="#">合成</a>
+							<ul class="daohang7">
+				<span class="header">归来传奇2合成</span>
+				<li>
+					<a href="#">武器</a>
+					<a href="#">盔甲</a>
+					<a href="#">食物</a>
+					<a href="#">药水</a>
+					<a href="#">宝玉</a>
+
+
+					<a href="#"></a>
+
+				</li>
+
+				<span class="footer"> 更多介绍点击 
+					 <a href="#">更多</a> </span>
+			</ul>
+		</li>
+		<li><a href="#">任务</a>
+							<ul class="daohang7">
+				<span class="header">归来传奇2任务</span>
+				<li>
+					<a href="#">基础任务</a>
+					<a href="#">每日任务</a>
+					<a href="#">挑战任务</a>
+					<a href="#">神秘商店</a>
+					<a href="#">命运之刃</a>
+
+
+
+				</li>
+
+				<span class="footer"> 更多介绍点击 
+					 <a href="#">更多</a> </span>
+			</ul>
+		</li>
+		<li><a href="#">商城</a>
+							<ul class="daohang7">
+				<span class="header">归来传奇2商城</span>
+				<li>
+					<a href="#">辅助</a>
+					<a href="#">灵物</a>
+					<a href="#">玩具</a>
+					<a href="#">英雄</a>
+					<a href="#">套餐</a>
+
+
+				</li>
+
+				<span class="footer"> 更多介绍点击 
+					 <a href="#">更多</a> </span>
+			</ul>
+		</li>
+		<li><a href="#">展示</a>
+							<ul class="daohang7">
+				<span class="header">归来传奇2展示</span>
+				<li>
+					<a href="#">博文</a>
+					<a href="#">图片</a>
+					<a href="#">视频</a>
+
+				</li>
+
+				<span class="footer"> 更多介绍点击 
+					 <a href="#">更多</a> </span>
+			</ul>
+		</li>
+		<li><a href="#">论坛</a>
+							<ul class="daohang7">
+				<span class="header">归来传奇2论坛</span>
+				<li>
+
+					<a href="#">韩服论坛</a>
+					<a href="#">美服论坛</a>
+					<a href="#">国服论坛</a>
+				</li>
+
+				<span class="footer"> 更多介绍点击 
+					 <a href="#">更多</a> </span>
+			</ul>
+		</li>
+		<li>
+			<a href="#">更多</a>
+			<ul class="daohang">
+				<span class="header">资源</span>
+				<li>
+
+					<a href="#">经验列表</a>
+					<a href="#">属性列表</a>
+					<a href="#">咨询回复</a>
+					<a href="#">更新日志</a>
+				</li>
+				<li>
+					<a href="#">开发日志</a>
+					<a href="#">私服技术</a>
+					<a href="#">相关技术</a>
+					<a href="#">心得总结</a>
+
+				</li>
+				<li>
+					<a href="#">源码下载</a>
+					<a href="#">服务端下载</a>
+					<a href="#">客户端下载</a>
+					<a href="#">相关资源下载</a>
+					<a href="#"></a>
+				</li>
+				<span class="footer"> 更多介绍点击 
+					 <a href="#">更多</a> </span>
+			</ul>
+		</li>
+	</ul>
+</div>
+	</section>
+</div>
+
+
+
+  <!--  <img src="黄金屠龙刀.png">  -->
+
+<div style="text-align:center;clear:both">
+
+
+  <!-- <p><font color:rgb(255,255,255);><h1>归来传奇</h1>    </font></p> -->
+
+
+      <div style="z-indent:0">
+      <img src="Main_Box.png">
+      </div>
+
+
+
+      <div style="position:absolute;left:680px;top:500px;" >
+	  <!--  <img src="kuang.png"> -->
+
+      <b><font size="3" color=""><b>传奇2</b></font></b> <br>
+
+	  <hr>
+      </div>
+   
+
+        <div style="position:absolute;left:697px;top:540px;" >
+		      
+		<!-- <img src="黄金屠龙刀.png"><br> -->
+ <br>
+<table>
+<tr>
+	<td>1.76的回忆</td>
+	<td>经典三职业</td>
+
+</tr>
+
+<tr>
+	<td>新地图</td>
+	<td>新装备</td>
+	<td>新技能</td>
+
+
+</tr>
+<tr>
+	<td> 9重技能</td>
+	<td>连击技能</td>
+	<td>生活技能</td>
+	<td>采集系统</td>
+	<td>锻造系统</td>
+
+
+</tr>
+<tr>
+	<td>&nbsp;新强化系统</td>
+	<td>&nbsp;新合成系统</td>
+	<td>&nbsp;新宝石系统</td>
+	<td>&nbsp;全新战坐骑</td>
+	<td>&nbsp;全新任务系统</td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+
+</table>
+
+
+
+
+      <div style="position:absolute;left:30px;top:130px;z-indent:1" >
+	    <img src="kuang.png">
+
+      
+      </div>
+
+
+       <div style="position:absolute;left:48px;top:152px;z-indent:2" >
+       <img src="1.76经典1.jpg">
+       </div>
+
+
+
+
+	    <div style="position:absolute;left:30px;top:380px;z-indent:1" >
+	    <img src="kuang.png">
+
+      
+      </div>
+
+
+       <div style="position:absolute;left:48px;top:402px;z-indent:2" >
+       <img src="3pros.jpg">
+
+
+	   <div style="position:absolute;left:-14px;top:240px;z-indent:1" >
+	    <img src="kuang.png">
+
+      
+      </div>
+
+
+       <div style="position:absolute;left:4px;top:262px;z-indent:2" >
+       <img src="黄金屠龙刀胖.png">
+       </div>
+
+       <div style="position:absolute;left:6px;top:482px;z-indent:2" >
+       <p> qq群交流：</p>
+	   <p> 贴吧地址：</p>
+       </div>
+
+<!-- <img src="warrior.png"> <br> -->
+
+       </div>
+
+
+</div>
+
+
+
+
+		<br>
+		<br>
+		<br>
+		<br>
+<div id="cnfooter">
+<p><font color:rgb(255,255,255)>适用浏览器：FireFox、Chrome、Opera、傲游、搜狗. 不支持IE8、360、Safari、世界之窗。</font></p><br>
+<p><font color:rgb(255,255,255)>来源：</font><a href="index.html" target="_blank"><font color:rgb(255,255,255)>传奇2</font></a></p>
+</div >
+
+</html>
